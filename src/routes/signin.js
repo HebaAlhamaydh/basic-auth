@@ -27,10 +27,10 @@ signInRouter.post("/signin", basicAuth,async (req, res) => {
                         user
                     });
                 } else {
-                    res.status(500).send("wrong username or password");
-                }
+                    res.status(500).send("wrong password");
+                 }
             } catch {
-                res.status(500).send("app error");
+                res.status(500).send("invalid user name ");
             }
         
     });
